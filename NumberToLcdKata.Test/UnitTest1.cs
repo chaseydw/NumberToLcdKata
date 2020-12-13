@@ -21,6 +21,8 @@ namespace NumberToLcdKata.Test
         string middleFour = " |_|";
         string lowerFour = "   |";
 
+       
+
         [SetUp]
         public void Setup()
         {
@@ -91,6 +93,30 @@ namespace NumberToLcdKata.Test
                               + lowerOne + lowerTwo + lowerOne + lowerThree + lowerFour;
 
             Assert.AreEqual(lcdVal, numberConverter.ConvertToLcd("12134"));
+        }
+
+        [Test]
+        public void TestConvertTwoWithhHeightOfTwoAndWidthOfThree()
+        {
+            string Two = "   ___\n      |\n      |\n   ___\n  |   \n  |   \n   ___";
+
+            Assert.AreEqual(Two, numberConverter.ConvertToLcd("2", 2, 3));
+        }
+
+        [Test]
+        public void TestConvertTwoTwosWithhHeightOfTwoAndWidthOfThree()
+        {
+            string Two = "   ___  ___  ___  ___  ___  ___\n      |    |    |    |    |    |\n      |    |    |    |    |    |\n   ___  ___  ___  ___  ___  ___\n  |    |    |    |    |    |   \n  |    |    |    |    |    |   \n   ___  ___  ___  ___  ___  ___";
+
+            Assert.AreEqual(Two, numberConverter.ConvertToLcd("222222", 2, 3));
+        }
+
+        [Test]
+        public void TestConvertTwoTwosWithhHeightOfFourAndWidthOfSix()
+        {
+            string Two = "   ______  ______\n         |       |\n         |       |\n         |       |\n         |       |\n   ______  ______\n  |       |      \n  |       |      \n  |       |      \n  |       |      \n   ______  ______";
+
+            Assert.AreEqual(Two, numberConverter.ConvertToLcd("22", 4, 6));
         }
 
     }

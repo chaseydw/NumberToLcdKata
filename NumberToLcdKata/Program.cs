@@ -22,24 +22,17 @@ namespace NumberToLcdKata
             string middleFour = " |_|";
             string lowerFour = "   |";
 
+            string Two = "  __\n    |\n    |\n  __\n |\n |\n  __";
+
+            string TwoLine = "|";
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-            Console.WriteLine(
+            Console.WriteLine("   ___  ___  ___  ___  ___  ___\n      |    |    |    |    |    |\n      |    |    |    |    |    |\n   ___  ___  ___  ___  ___  ___\n  |    |    |    |    |    |   \n  |    |    |    |    |    |   \n   ___  ___  ___  ___  ___  ___");
+            /*Console.WriteLine(
                                 upperOne + upperTwo + upperThree +  upperFour+ "\n" 
                               + middleOne + middleTwo + middleThree + middleFour + "\n" 
-                              + lowerOne + lowerTwo + lowerThree + lowerFour);
+                              + lowerOne + lowerTwo + lowerThree + lowerFour);*/
         }
     }
 }
